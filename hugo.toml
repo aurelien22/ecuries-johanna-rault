@@ -1,0 +1,8 @@
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+
+[params]
+name = "Aurélien D."
+subtitle = "Une écurie familliale dédiée au bien-être du cheval à Hénansal près de Lamballe"
+subtitleText = "Titulaire d’un galop 7 et d’un BTS Productions Animales Option Équitation, j’ai ouvert cette écurie pour offrir à chaque cheval une attention personnalisée dans un cadre convivial et naturel. Ici, la priorité est donnée à la mobilité, au bien-être et à l’écoute des besoins de chaque équidé, quelle que soit sa discipline ou son âge. Présente 7 jours sur 7, je veille à ce que chaque pensionnaire profite d’un environnement sain, de sorties quotidiennes au paddock et d’une alimentation de qualité, issue de prairies naturelles non traitées. Rejoignez une écurie où l’ambiance est décontractée, mais où le sérieux et la passion guident chaque décision."

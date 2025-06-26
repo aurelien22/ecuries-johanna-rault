@@ -1,0 +1,32 @@
+{{ with .Params.hide_footer }}
+{{ else }}
+<footer class="site-footer">
+  <div class="footer-central">
+    <div class="footer-social-title">SUIVEZ-NOUS</div>
+    <div class="footer-social-icons">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="footer-icon">
+        <!-- Instagram minimaliste -->
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect x="4" y="4" width="24" height="24" rx="7" stroke="#647355" stroke-width="2"/>
+          <circle cx="16" cy="16" r="6" stroke="#647355" stroke-width="2"/>
+          <circle cx="22" cy="10" r="1.2" fill="#647355"/>
+        </svg>
+      </a>
+      <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook" class="footer-icon">
+        <!-- Facebook minimaliste -->
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="16" r="12" stroke="#647355" stroke-width="2"/>
+          <path d="M18 11V10c0-1 .8-1.8 1.8-1.8H21V6.5h-1.2C17.1 6.5 16 7.6 16 9v2h-2v2.5h2V25h2.5V13.5H21l.5-2.5h-2.5z" fill="#647355"/>
+        </svg>
+      </a>
+    </div>
+    <div class="footer-legal">
+      <span>&copy; {{ now.Year }} {{ .Site.Params.name }}</span>
+      <span class="footer-sep">|</span>
+      <a href="/mentions-legales">Mentions légales</a>
+      <span class="footer-sep">|</span>
+      <a href="/politique-confidentialite">Politique de confidentialité</a>
+    </div>
+  </div>
+</footer>
+{{ end }}

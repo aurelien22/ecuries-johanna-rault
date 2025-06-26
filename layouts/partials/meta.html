@@ -1,0 +1,6 @@
+<meta charset="utf-8">
+<title>{{ .Page.Title }}</title>
+{{ $style := resources.Get "sass/main.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
+{{ $font := resources.Get "fonts/Shine-in-Valentine.ttf" }}
+<link rel="preload" href="{{ $font.RelPermalink }}" as="font" type="font/ttf" crossorigin>
+<link rel="stylesheet" href="{{ $style.Permalink }}">
