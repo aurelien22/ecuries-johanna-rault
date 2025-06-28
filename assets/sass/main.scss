@@ -12,6 +12,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Alegreya-Regular";
+  src:url('/fonts/Alegreya-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 // Palette principale
 $vert-fonce: #43594D;
 $vert-olive: #647355;
@@ -39,6 +46,8 @@ html, body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  font-family: "Alegreya-Regular", serif;
+  font-size: 1.15rem;         // Plus grand pour l'impact
 }
 
 .site-header {
@@ -131,14 +140,6 @@ html, body {
   }
 }
 
-h1 {
-  font-family: "PoliceTitre", sans-serif;
-  font-size:56px;
-  font-weight: 700;
-  color: #43594D;
-  margin-bottom: 0;
-}
-
 .titre_bis {
   color: #647355;
 }
@@ -148,7 +149,18 @@ h1 {
 }
 
 .logo {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+}
+
+.logo h1 {
+  font-family: "PoliceTitre", sans-serif;
+  font-size:56px;
+  font-weight: 700;
+  color: #43594D;
+  margin: 0;
 }
 
 nav {
@@ -193,26 +205,78 @@ footer {
 
 // Mot de la gérante
 .mot-gerante {
-  background: $blanc;
-  color: $vert-fonce;
-  padding: 2.5rem 2rem 2.5rem 2rem;
+  background: #fff;
+  color: #43594D;
+  padding: 3rem 2.5rem;
   max-width: 900px;
-  margin: 2rem auto;
-  border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(67, 89, 77, 0.07);
+  margin: 1rem auto;
+  border-radius: 18px;
+  box-shadow: 0 4px 20px rgba(67, 89, 77, 0.10);
+  font-family: "Alegreya-Regular", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   h2 {
-    color: $vert-olive;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    color: #647355;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
     font-weight: 700;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
+    text-align: center;
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #43594D;
+      margin: 1rem auto 0 auto;
+      border-radius: 2px;
+    }
+  }
+
+  .mot-gerante-content {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   p {
-    font-size: 1.08rem;
+    font-size: 1.15rem;
     line-height: 1.7;
-    margin-bottom: 1.2em;
+    margin-bottom: 1.2rem;
+    color: #43594D;
+    text-align: justify;
+  }
+
+  .signature {
+    font-family: "PoliceTitre", serif; // ou une police manuscrite si tu en as une
+    font-size: 1.08rem;
+    color: #647355;
+    font-style: italic;
+    text-align: right;
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+}
+
+.mot-gerante-photo {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0;
+  box-shadow: 0 2px 8px rgba(67,89,77,0.08);
+}
+
+@media (max-width: 700px) {
+  .mot-gerante {
+    padding: 1.5rem 0.7rem;
+    h2 { font-size: 1.3rem; }
+    p { font-size: 1.02rem; }
   }
 }
 
@@ -772,7 +836,7 @@ footer {
 
 .site-footer {
   background: #f2f2f2;
-  font-family: "PoliceTitre", serif;
+  font-family: "Alegreya-Regular", serif;
   color: #43594D;
   width: 100vw;
   box-sizing: border-box;
@@ -790,7 +854,7 @@ footer {
 
   .footer-social-title {
     color: #647355;
-    font-family: "PoliceTitre", serif;
+    font-family: "Alegreya-Regular", serif;
     font-size: 1.1rem;
     font-weight: 600;
     letter-spacing: 0.07em;

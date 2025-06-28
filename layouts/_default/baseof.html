@@ -29,10 +29,16 @@
   <!-- Mot de la gérante -->
                 <section class="mot-gerante">
                     <div class="mot-gerante-content">
-                    <h2>Le mot de la gérante</h2>
-                    {{- with .Site.Params.subtitleText }}
-                    <p class="subtitleText">{{ . }}</p>
-                    {{- end }}
+                        {{ with resources.Get "images/jo.jpg" }}
+                            <img src="{{ .RelPermalink }}" alt="Johanna Rault" class="mot-gerante-photo">
+                        {{ end }}
+                        <h2>Le mot de la gérante</h2>
+                        <p>
+                            {{- with .Site.Params.motGerante }}
+                            <p class="mot-gerante">{{ . }}</p>
+                            {{- end }}
+                        </p>
+                        <div class="signature">Johanna Rault</div>
                     </div>
                 </section>
 
@@ -115,7 +121,7 @@
                         <div class="tarif-card">
                         <div class="tarif-icon">🐴</div>
                         <h3>Pension boxe/paddock</h3>
-                        <p class="tarif-price">300€ TTC par mois</p>
+                        <p class="tarif-price">340€ TTC par mois</p>
                         <p class="tarif-desc">Boxe paillé, refait tous les jours et curé une fois par semaine.
 Sortie quotidienne au paddock individuel avec eau et foin à disposition.
 2 à 3 repas de granulés.</p>
@@ -125,9 +131,9 @@ Sortie quotidienne au paddock individuel avec eau et foin à disposition.
                             <div class="tarif-icon">🐎</div>
                             <h3>Location des installations</h3>
                             <table class="tarif-table">
-                                <tr><td>Par jour</td><td>5 €</td></tr>
-                                <tr><td>Par mois</td><td>15 €</td></tr>
-                                <tr><td>Par an</td><td>150 €</td></tr>
+                                <tr><td>Par jour</td><td>10 €</td></tr>
+                                <tr><td>Par mois</td><td>50 €</td></tr>
+                                <tr><td>Par an</td><td>300 €</td></tr>
                             </table>
                             <p class="tarif-desc">Utilisation du rond de longe, de la carrière, de l'espace de douche.</p>
                         </div>
