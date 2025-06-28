@@ -6,14 +6,11 @@
 <link rel="stylesheet" href="{{ $style.Permalink }}">-->
 <meta charset="utf-8">
 <title>{{ .Page.Title }}</title>
-{{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-{{ with $font1 := resources.Get "fonts/fontmaison.otf" }}
-<link rel="preload" href="{{ .RelPermalink }}" as="font" type="font/otf" crossorigin>
+{{ with resources.Get "sass/main.scss" }}
+  {{ $style := . | css.Sass | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 {{ end }}
-{{ with $font2 := resources.Get "fonts/theglorious.otf" }}
+{{ with resources.Get "fonts/fontmaison.otf" }}
 <link rel="preload" href="{{ .RelPermalink }}" as="font" type="font/otf" crossorigin>
-{{ end }}
-{{ with $style }}
-<link rel="stylesheet" href="{{ .RelPermalink }}">
 {{ end }}
 

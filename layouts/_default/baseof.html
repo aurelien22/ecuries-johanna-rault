@@ -30,7 +30,9 @@
                 <section class="mot-gerante">
                     <div class="mot-gerante-content">
                     <h2>Le mot de la gérante</h2>
-                    <p>Passionnée par les chevaux depuis toujours...</p>
+                    {{- with .Site.Params.subtitleText }}
+                    <p class="subtitleText">{{ . }}</p>
+                    {{- end }}
                     </div>
                 </section>
 
