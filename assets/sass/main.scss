@@ -395,6 +395,19 @@ footer {
   }
 }
 
+.section-separator-bis {
+  background: white;
+  width: 100%;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  svg {
+    display: block;
+    width: 100%;
+    height: 120px;
+  }
+}
+
 // Section tarifs
 .tarifs {
   background: #fff;
