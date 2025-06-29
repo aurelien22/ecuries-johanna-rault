@@ -157,40 +157,40 @@ Sortie quotidienne au paddock individuel avec eau et foin à disposition.
 
                 <!-- Contact -->
                 <section class="contact-hero">
-  <div class="contact-hero-inner">
-    <!-- Photo à gauche -->
-    <div class="contact-hero-photo">
-      {{ with resources.Get "images/bandeau4.jpg" }}
-        <img src="{{ .RelPermalink }}" alt="Vue de l'écurie ou portrait de Johanna Rault">
-      {{ else }}
-        <div style="background: #ccc; height: 320px; display: flex; align-items: center; justify-content: center;">
-          Image non trouvée
-        </div>
-      {{ end }}
-    </div>
-    <!-- Infos à droite -->
-    <div class="contact-hero-infos">
-      <h2>Nous contacter</h2>
-      <div class="contact-hero-infos-block">
-        <div>
-          <span class="info-label">Adresse : </span>
-          <span class="info-value">Les Vaux, 22400 Hénansal</span>
-        </div>
-        <div>
-          <span class="info-label">Email : </span>
-          <span class="info-value">contact@ecurie-johanna.fr</span>
-        </div>
-        <div>
-          <span class="info-label">Téléphone : </span>
-          <span class="info-value">06 76 54 44 66</span>
-        </div>
-        <a class="contact-hero-link" href="https://www.google.com/maps/dir/?api=1&destination=48.550981552313004,-2.416129561743111" target="_blank" rel="noopener">
-          Itinéraire Google Maps
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+                    <div class="contact-hero-inner">
+                        <!-- Photo à gauche -->
+                        <div class="contact-hero-photo">
+                        {{ with resources.Get "images/bandeau4.jpg" }}
+                            <img src="{{ .RelPermalink }}" alt="Vue de l'écurie ou portrait de Johanna Rault">
+                        {{ else }}
+                            <div style="background: #ccc; height: 320px; display: flex; align-items: center; justify-content: center;">
+                            Image non trouvée
+                            </div>
+                        {{ end }}
+                        </div>
+                        <!-- Infos à droite -->
+                        <div class="contact-hero-infos">
+                        <h2>Nous contacter</h2>
+                        <div class="contact-hero-infos-block">
+                            <div>
+                            <span class="info-label">Adresse : </span>
+                            <span class="info-value">Les Vaux, 22400 Hénansal</span>
+                            </div>
+                            <div>
+                            <span class="info-label">Email : </span>
+                            <span class="info-value">contact@ecurie-johanna.fr</span>
+                            </div>
+                            <div>
+                            <span class="info-label">Téléphone : </span>
+                            <span class="info-value">06 76 54 44 66</span>
+                            </div>
+                            <a class="contact-hero-link" href="https://www.google.com/maps/dir/?api=1&destination=48.550981552313004,-2.416129561743111" target="_blank" rel="noopener">
+                            Itinéraire Google Maps
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                    </section>
                 </main>
             {{ partial "footer" . }}
         </div>

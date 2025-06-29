@@ -1,5 +1,5 @@
 ---
-title: A propos
+title: Ecurie Johanna Rault - Ecurie de propriétaire à 15 mins de la mer
 ---
 
 LE MOT DE LA GÉRANTE
