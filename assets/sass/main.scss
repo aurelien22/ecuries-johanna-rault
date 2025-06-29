@@ -50,6 +50,11 @@ html, body {
   font-size: 1.15rem;         // Plus grand pour l'impact
 }
 
+.en-tete a[href^="tel"] {
+  color: #f2f2f2;         /* Ou la couleur exacte de ton texte */
+  text-decoration: none;
+}
+
 .site-header {
   background-color: #f2f2f2;
   position: relative;
