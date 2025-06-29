@@ -35,7 +35,7 @@
                         <h2>Le mot de la gérante</h2>
                         <p>
                             {{- with .Site.Params.motGerante }}
-                            <p class="mot-gerante">{{ . }}</p>
+                            <div class="mot-gerante">{{ . | markdownify }}</div>
                             {{- end }}
                         </p>
                         <div class="signature">Johanna Rault</div>
