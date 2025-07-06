@@ -15,7 +15,7 @@
                     <p class="subtitleText">{{ . }}</p>
                     {{- end }}
                 </div>
-                {{ with resources.Get "images/bandeau3.jpg" }}
+                {{ with resources.Get "images/bandeau3.webp" }}
                   <div class="presentation__image">
                       <img src="{{ .RelPermalink }}" alt="Bandeau écurie">
                   </div>
@@ -29,7 +29,7 @@
   <!-- Mot de la gérante -->
                 <section class="mot-gerante">
                     <div class="mot-gerante-content">
-                        {{ with resources.Get "images/jo.jpg" }}
+                        {{ with resources.Get "images/jo.webp" }}
                             <img src="{{ .RelPermalink }}" alt="Johanna Rault" class="mot-gerante-photo">
                         {{ end }}
                         <h2>Le mot de la gérante</h2>
@@ -47,7 +47,7 @@
                     <h2>Nos installations</h2>
                     <div class="installations-grid">
                         <div class="installation-card">
-                        {{ with resources.Get "images/boxes.jpg" }}
+                        {{ with resources.Get "images/boxes.webp" }}
                           <img src="{{ .RelPermalink }}" alt="Boxes spacieux">
                         {{ else }}
                           <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
@@ -57,7 +57,7 @@
                         <h3>Boxes spacieux</h3>
                         </div>
                         <div class="installation-card">
-                        {{ with resources.Get "images/paddocks.jpg" }}
+                        {{ with resources.Get "images/paddocks.webp" }}
                           <img src="{{ .RelPermalink }}" alt="Paddocks en herbe">
                         {{ else }}
                           <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
@@ -67,7 +67,7 @@
                         <h3>Paddocks en herbe</h3>
                         </div>
                         <div class="installation-card">
-                        {{ with resources.Get "images/carriere.jpg" }}
+                        {{ with resources.Get "images/carriere.webp" }}
                           <img src="{{ .RelPermalink }}" alt="Carrière éclairée">
                         {{ else }}
                           <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
@@ -77,7 +77,7 @@
                         <h3>Carrière éclairée</h3>
                         </div>
                         <div class="installation-card">
-                        {{ with resources.Get "images/sellerie.jpg" }}
+                        {{ with resources.Get "images/sellerie.webp" }}
                           <img src="{{ .RelPermalink }}" alt="Sellerie sécurisée">
                         {{ else }}
                           <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
@@ -87,7 +87,7 @@
                         <h3>Sellerie sécurisée</h3>
                         </div>
                         <div class="installation-card">
-                        {{ with resources.Get "images/rondLonge.jpg" }}
+                        {{ with resources.Get "images/rondLonge.webp" }}
                           <img src="{{ .RelPermalink }}" alt="Rond de longe">
                         {{ else }}
                           <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
@@ -97,7 +97,7 @@
                         <h3>Rond de longe</h3>
                         </div>
                         <div class="installation-card">
-                        {{ with resources.Get "images/trotting.jpg" }}
+                        {{ with resources.Get "images/trotting.webp" }}
                           <img src="{{ .RelPermalink }}" alt="Chemins de balades">
                         {{ else }}
                           <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
@@ -160,7 +160,7 @@ Sortie quotidienne au paddock individuel avec eau et foin à disposition.
                     <div class="contact-hero-inner">
                         <!-- Photo à gauche -->
                         <div class="contact-hero-photo">
-                        {{ with resources.Get "images/bandeau4.jpg" }}
+                        {{ with resources.Get "images/bandeau4.webp" }}
                             <img src="{{ .RelPermalink }}" alt="Vue de l'écurie ou portrait de Johanna Rault">
                         {{ else }}
                             <div style="background: #ccc; height: 320px; display: flex; align-items: center; justify-content: center;">
