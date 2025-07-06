@@ -1,22 +1,25 @@
 @font-face {
   font-family: "PoliceTitre";
-  src:url('/fonts/fontmaison.otf') format('opentype');
+  src: url('/fonts/fontmaison.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "PoliceTitreBis";
-  src:url('/fonts/theglorious.otf') format('opentype');
+  src: url('/fonts/theglorious.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Alegreya-Regular";
-  src:url('/fonts/Alegreya-Regular.otf') format('opentype');
+  src:url('/fonts/Alegreya-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 // Palette principale
