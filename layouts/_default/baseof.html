@@ -165,6 +165,51 @@
                         {{ end }}
                         <h3>Nombreux chemins de balades</h3>
                         </div>
+                        <div class="installation-card">
+                        {{ with resources.Get "images/plage1.webp" }}
+                        {{ $resized := .Fit "391x220 webp q75" }}
+                        <img 
+                            src="{{ $resized.RelPermalink }}" 
+                            width="391" height="220" 
+                            alt="Plage à cheval"
+                            loading="lazy"
+                        >
+                        {{ else }}
+                        <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
+                            Image non trouvée
+                        </div>
+                        {{ end }}
+                        </div>
+                        <div class="installation-card">
+                        {{ with resources.Get "images/plage2.webp" }}
+                        {{ $resized := .Fit "391x220 webp q90" }}
+                        <img 
+                            src="{{ $resized.RelPermalink }}" 
+                            width="391" height="220" 
+                            alt="Plage à cheval"
+                            loading="lazy"
+                        >
+                        {{ else }}
+                        <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
+                            Image non trouvée
+                        </div>
+                        {{ end }}
+                        </div>
+                        <div class="installation-card">
+                        {{ with resources.Get "images/plage3.webp" }}
+                        {{ $resized := .Fit "391x220 webp q75" }}
+                        <img 
+                            src="{{ $resized.RelPermalink }}" 
+                            width="391" height="220" 
+                            alt="Plage à cheval"
+                            loading="lazy"
+                        >
+                        {{ else }}
+                        <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
+                            Image non trouvée
+                        </div>
+                        {{ end }}
+                        </div>
                     </div>
                 </section>
                 <!-- Séparateur graphique -->
