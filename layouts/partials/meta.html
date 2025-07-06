@@ -1,10 +1,14 @@
 <meta charset="utf-8">
+<meta
+  name="description"
+  content="Découvrez une écurie conviviale en Bretagne, dédiée au bien-être du cheval et à l’accompagnement des cavaliers. Visite et réservation sur simple demande."
+>
 <title>{{ .Page.Title }}</title>
 {{ with resources.Get "sass/main.scss" }}
   {{ $style := . | css.Sass | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 {{ end }}
-{{ with resources.Get "fonts/fontmaison.otf" }}
-<link rel="preload" href="{{ .RelPermalink }}" as="font" type="font/otf" crossorigin>
+{{ with resources.Get "fonts/fontmaison.woff2" }}
+<link rel="preload" href="{{ .RelPermalink }}" as="font" type="font/woff2" crossorigin>
 {{ end }}
 
