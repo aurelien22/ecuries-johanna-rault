@@ -1,11 +1,11 @@
 baseURL = "https://www.ecuries-johanna-rault.fr/"
 languageCode = "fr-ufr"
 title = "Ecuries Johanna Rault"
-phone = "06 76 54 44 66"
-email = "premierpasdlonge@orange.fr"
 
 [params]
 name = "Aurélien D."
+phone = "06 76 54 44 66"
+email = "premierpasdlonge@orange.fr"
 subtitle = "Une écurie familliale dédiée au bien-être du cheval à Hénansal près de Lamballe"
 subtitleText = "Bénéficiez d'un lieu calme et apaisant pour profiter de votre passion à 15 minutes de la plage 🌊. En week-end ou en vacances avec votre cheval, nous pouvons également vous accueillir sur des courtes durées. "
 motGerante = """
