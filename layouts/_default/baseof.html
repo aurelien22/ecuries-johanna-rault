@@ -51,11 +51,20 @@
                     <div class="installations-grid">
                         <div class="installation-card">
                         {{ with resources.Get "images/boxes.webp" }}
-                          <img src="{{ .RelPermalink }}" alt="Boxes spacieux">
+                        {{ $small := .Fit "391x220 webp q75" }}
+                        {{ $medium := .Fit "800x450 webp q75" }}
+                        <img 
+                            src="{{ $small.RelPermalink }}" 
+                            srcset="{{ $small.RelPermalink }} 391w, {{ $medium.RelPermalink }} 800w"
+                            sizes="(max-width: 600px) 391px, 800px"
+                            width="391" height="220"
+                            alt="Boxes spacieux"
+                            loading="lazy"
+                        >
                         {{ else }}
-                          <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
+                        <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
                             Image non trouvée
-                          </div>
+                        </div>
                         {{ end }}
                         <h3>Boxes spacieux</h3>
                         </div>
