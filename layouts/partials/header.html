@@ -1,13 +1,13 @@
 <div class="container">
     <div class="en-tete">
         <div class="phone">
-            {{- with .Site.Params.subtitle }}
-                    <p class="phone">{{ . }}</p>
+            {{- with .Site.Params.phone }}
+                {{ . }}
             {{- end }}
         </div>
         <div class="email">
-            {{- with .Site.Params.subtitle }}
-                <p class="email">{{ . }}</p>
+            {{- with .Site.Params.email }}
+                {{ . }}
             {{- end }}
         </div>
     </div>
