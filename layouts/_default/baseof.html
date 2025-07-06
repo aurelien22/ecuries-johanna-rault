@@ -16,16 +16,22 @@
                     {{- end }}
                 </div>
                 {{ with resources.Get "images/bandeau3.webp" }}
-                  <div class="presentation__image">
-                      <img 
-                        src="{{ .RelPermalink }}" 
-                        alt="Bandeau écurie"
-                        fetchpriority="high">
-                  </div>
+                {{ $resized := .Fit "475x333 webp q75" }}
+                <picture>
+                    <source srcset="{{ $resized.RelPermalink }}" type="image/webp">
+                    <source srcset="{{ .RelPermalink }}" type="image/jpeg">
+                    <img 
+                    src="{{ $resized.RelPermalink }}" 
+                    width="475" height="333" 
+                    alt="Bandeau écurie" 
+                    fetchpriority="high"
+                    style="width:100%;height:auto;object-fit:cover;"
+                    >
+                </picture>
                 {{ else }}
-                  <div class="presentation__image" style="background: #ccc; height: 320px; display: flex; align-items: center; justify-content: center;">
+                <div class="presentation__image" style="background: #ccc; height: 333px; display: flex; align-items: center; justify-content: center;">
                     Image non trouvée
-                  </div>
+                </div>
                 {{ end }}
             </div>
             <main>
@@ -33,7 +39,18 @@
                 <section class="mot-gerante">
                     <div class="mot-gerante-content">
                         {{ with resources.Get "images/jo.webp" }}
-                            <img src="{{ .RelPermalink }}" alt="Johanna Rault" class="mot-gerante-photo">
+                        {{ $resized := .Fit "68x72 webp q75" }}
+                        <img 
+                            src="{{ $resized.RelPermalink }}" 
+                            width="68" height="72" 
+                            alt="Johanna Rault" 
+                            class="mot-gerante-photo"
+                            loading="lazy"
+                        >
+                        {{ else }}
+                        <div style="background: #ccc; width: 68px; height: 72px; display: flex; align-items: center; justify-content: center;">
+                            Image non trouvée
+                        </div>
                         {{ end }}
                         <h2>Le mot de la gérante</h2>
                         <p>
@@ -70,51 +87,81 @@
                         </div>
                         <div class="installation-card">
                         {{ with resources.Get "images/paddocks.webp" }}
-                          <img src="{{ .RelPermalink }}" alt="Paddocks en herbe">
+                        {{ $resized := .Fit "320x569 webp q75" }}
+                        <img 
+                            src="{{ $resized.RelPermalink }}" 
+                            width="320" height="569" 
+                            alt="Paddocks en herbe"
+                            loading="lazy"
+                        >
                         {{ else }}
-                          <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
+                        <div style="background: #ccc; height: 569px; display: flex; align-items: center; justify-content: center;">
                             Image non trouvée
-                          </div>
+                        </div>
                         {{ end }}
                         <h3>Paddocks en herbe</h3>
                         </div>
                         <div class="installation-card">
                         {{ with resources.Get "images/carriere.webp" }}
-                          <img src="{{ .RelPermalink }}" alt="Carrière éclairée">
+                        {{ $resized := .Fit "320x240 webp q75" }}
+                        <img 
+                            src="{{ $resized.RelPermalink }}" 
+                            width="320" height="240" 
+                            alt="Carrière éclairée"
+                            loading="lazy"
+                        >
                         {{ else }}
-                          <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
+                        <div style="background: #ccc; height: 240px; display: flex; align-items: center; justify-content: center;">
                             Image non trouvée
-                          </div>
+                        </div>
                         {{ end }}
                         <h3>Carrière éclairée</h3>
                         </div>
                         <div class="installation-card">
                         {{ with resources.Get "images/sellerie.webp" }}
-                          <img src="{{ .RelPermalink }}" alt="Sellerie sécurisée">
+                        {{ $resized := .Fit "320x427 webp q75" }}
+                        <img 
+                            src="{{ $resized.RelPermalink }}" 
+                            width="320" height="427" 
+                            alt="Sellerie sécurisée"
+                            loading="lazy"
+                        >
                         {{ else }}
-                          <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
+                        <div style="background: #ccc; height: 427px; display: flex; align-items: center; justify-content: center;">
                             Image non trouvée
-                          </div>
+                        </div>
                         {{ end }}
                         <h3>Sellerie sécurisée</h3>
                         </div>
                         <div class="installation-card">
                         {{ with resources.Get "images/rondLonge.webp" }}
-                          <img src="{{ .RelPermalink }}" alt="Rond de longe">
+                        {{ $resized := .Fit "320x240 webp q75" }}
+                        <img 
+                            src="{{ $resized.RelPermalink }}" 
+                            width="320" height="240" 
+                            alt="Rond de longe"
+                            loading="lazy"
+                        >
                         {{ else }}
-                          <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
+                        <div style="background: #ccc; height: 240px; display: flex; align-items: center; justify-content: center;">
                             Image non trouvée
-                          </div>
+                        </div>
                         {{ end }}
                         <h3>Rond de longe</h3>
                         </div>
                         <div class="installation-card">
                         {{ with resources.Get "images/trotting.webp" }}
-                          <img src="{{ .RelPermalink }}" alt="Chemins de balades">
+                        {{ $resized := .Fit "391x220 webp q75" }}
+                        <img 
+                            src="{{ $resized.RelPermalink }}" 
+                            width="391" height="220" 
+                            alt="Chemins de balades"
+                            loading="lazy"
+                        >
                         {{ else }}
-                          <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
+                        <div style="background: #ccc; height: 220px; display: flex; align-items: center; justify-content: center;">
                             Image non trouvée
-                          </div>
+                        </div>
                         {{ end }}
                         <h3>Nombreux chemins de balades</h3>
                         </div>
@@ -178,11 +225,17 @@ Sortie quotidienne au paddock individuel avec eau et foin à disposition.
                         <!-- Photo à gauche -->
                         <div class="contact-hero-photo">
                         {{ with resources.Get "images/bandeau4.webp" }}
-                            <img src="{{ .RelPermalink }}" alt="Vue de l'écurie ou portrait de Johanna Rault">
+                        {{ $resized := .Fit "693x520 webp q75" }}
+                        <img 
+                            src="{{ $resized.RelPermalink }}" 
+                            width="693" height="520" 
+                            alt="Vue de l'écurie ou portrait de Johanna Rault"
+                            loading="lazy"
+                        >
                         {{ else }}
-                            <div style="background: #ccc; height: 320px; display: flex; align-items: center; justify-content: center;">
+                        <div style="background: #ccc; height: 520px; display: flex; align-items: center; justify-content: center;">
                             Image non trouvée
-                            </div>
+                        </div>
                         {{ end }}
                         </div>
                         <!-- Infos à droite -->
