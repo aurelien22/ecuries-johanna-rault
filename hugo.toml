@@ -1,6 +1,8 @@
-baseURL = "https://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "https://www.ecuries-johanna-rault.fr/"
+languageCode = "fr-ufr"
+title = "Ecuries Johanna Rault"
+phone = "06 76 54 44 66"
+email = "premierpasdlonge@orange.fr"
 
 [params]
 name = "Aurélien D."
